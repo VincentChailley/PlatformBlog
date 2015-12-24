@@ -1,0 +1,27 @@
+blogger_blog_home:
+    path:      /{page}
+    defaults:  { _controller: BloggerBlogBundle:Advert:index, page: 1 }
+    requirements:
+        page: \d*
+
+blogger_blog_view:
+    path:      /advert/{id}
+    defaults:  { _controller: BloggerBlogBundle:Advert:view }
+    requirements:
+        id: \d+
+
+blogger_blog_add:
+    path:      /add
+    defaults:  { _controller: BloggerBlogBundle:Advert:add }
+
+blogger_blog_edit:
+    path:      /edit/{id}
+    defaults:  { _controller: BloggerBlogBundle:Advert:edit }
+    requirements:
+        id: \d+
+
+blogger_blog_delete:
+    path:      /delete/{id}
+    defaults:  { _controller: BloggerBlogBundle:Advert:delete }
+    requirements:
+        id: \d+
